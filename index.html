@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frogger - Arcade Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/Resources.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/howler.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        var gameMusic = new Howl({
+            src: ['sounds/game-music.mp3'],
+            loop: true
+        });
+
+        var gameOver = new Howl({
+            src: ['sounds/gong.mp3']
+        });
+
+        var levelUp = new Howl({
+            src: ['sounds/points.mp3']
+        });
+
+        var gemCollect = new Howl({
+            src: ['sounds/gem.mp3']
+        });
+
+        var playerHit = new Howl({
+            src: ['sounds/punch.mp3']
+        });
+
+        var gameSelect = new Howl({
+            src: ['sounds/blop.mp3']
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <img class="img-responsive" src="img/logo.png" alt="frogger logo image">
+        <a id="header-music" class="toggle-music off">Music Off</a>
+    </header>
+
+    <!-- Start Screen -->
+    <div class="start-screen overlay">
+        <div class="grass-top"></div>
+        <div class="content">
+            <a id="start-screen-music" class=" toggle-music off">Music Off</a>
+            <img class="img-responsive" src="img/logo.png" alt="frogger logo image">
+            <div class="start-screen-options">
+                <a class="play-game button">Click to Play!</a>
+                    <a id="how-to-play" class="button">How to Play</a>
+            </div>
+
+        </div>
+        <div class="grass-bottom"></div>
+    </div>
+
+    <!-- How to Play -->
+    <div class="instructions-to-play overlay hidden">
+        <div class="content">
+            <h2 class="heading">Instructions to Play!</h2>
+            <p>Press the up, down, left and right arrow keys on your keyboard to move the player.
+                Do your best to get to the other side of the road without being taken down by the evil bug!</p>
+            <p>You have 3 lives. Clearing a level is worth 600 points, and a gem of any color is worth 300.</p>
+            <a class="instructions-to-play-close button">I am ready to play!</a>
+        </div>
+    </div>
+
+    <!-- Collision -->
+    <div class="collision overlay hidden">
+
+    </div>
+
+    <!-- Game Over -->
+    <div class="game-over hidden overlay">
+        <div class="content">
+            <h2 class="heading">Game Over</h2>
+            <div class="final-score">
+                Final Score: <span id="score"></span>
+            </div>
+            <a class="play-again button">Play Again</a>
+            <img class="responsive" src="img/char-boy-dead.png">
+        </div>
+    </div>
+
+    <script src="js/engine.js"></script>
+
+</body>
+</html>

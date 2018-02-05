@@ -1,0 +1,28 @@
+{
+  "name": "arcade-game",
+  "version": "1.0.0",
+  "description": "arcade game",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prabhuvashwin/arcade-game.git"
+  },
+  "keywords": [
+    "arcade",
+    "game",
+    "js",
+    "javascript",
+    "udacity",
+    "front",
+    "end"
+  ],
+  "author": "Ashwin V Prabhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prabhuvashwin/arcade-game/issues"
+  },
+  "homepage": "https://github.com/prabhuvashwin/arcade-game#readme"
+}

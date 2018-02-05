@@ -1,0 +1,192 @@
+* {
+    font-family: 'Pixel Miners';
+    font-style: normal;
+    font-weight: 400;
+}
+
+body {
+    background: #373535;
+    text-align: center;
+}
+
+header {
+	position: absolute;
+	width: 300px;
+	top: 15px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+canvas {
+	width: 90%;
+	height: 90%;
+	transition: all 1s linear;
+}
+
+@media only screen and (min-width: 800px) {
+	canvas {
+		margin-top: 10px;
+		height: 707px;
+		width: 707px;
+	}
+}
+
+.heading {
+    color: #ff0;
+}
+
+.button {
+    display: inline-block;
+    margin: 5px;
+    padding: 6px 40px;
+    border-radius: 5px;
+    background: #68d44f;
+    color: #ff0;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px green;
+}
+
+.button:hover {
+    opacity: 0.90;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.img-responsive {
+    display: block;
+    width: 100%;
+}
+
+.overlay {
+    background: #373535;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+}
+
+.overlay > .content {
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.start-screen > .content {
+    max-width: 600px;
+    padding: 15% 10%;
+}
+
+.start-screen .grass-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 172px;
+    width: 100%;
+    background: url(../img/stone-block.png);
+    transform: rotate(180deg);
+    background-repeat: repeat-x;
+}
+
+.start-screen .grass-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 172px;
+    width: 100%;
+    background: url(../img/grass-block.png);
+    background-repeat: repeat-x;
+}
+
+.start-screen-options {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.instructions-to-play > .content {
+    max-width: 600px;
+    padding: 5% 10%;
+}
+
+.instructions-to-play .heading {
+    font-size: 60px;
+}
+
+.instructions-to-play p {
+    color: #ff0;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.collision {
+    background: rgb(226, 44, 26);
+    opacity: 0.25;
+}
+
+.game-over > .content {
+	max-width: 800px;
+	margin-bottom: 0;
+	padding: 12% 10%;
+}
+
+.game-over .heading {
+	font-size: 100px;
+	margin-bottom: 0;
+}
+
+.game-over .final-score {
+	color: #ff0;
+	font-family: ArcadeClassic;
+	font-size: 20px;
+}
+
+.game-over .final-score span {
+	margin-left: 5px;
+	font-size: 24px;
+}
+
+.game-over img {
+	position: absolute;
+	top: 140px;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+
+.toggle-music {
+	color: #fff;
+	position: relative;
+    margin-bottom: 20px;
+	right: -200px;
+	font-size: 17px;
+}
+
+/* .toggle-music.off {
+	display: none;
+} */
+/*
+footer {
+	padding: 0;
+	width: 100%;
+	margin: auto;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	z-index: 99999;
+	top: 695px;
+}
+
+#how-to-play {
+	color: #ff0;
+	font-size: 20px;
+	word-spacing: 5px;
+} */
