@@ -108,12 +108,12 @@ var Engine = (function(global) {
          */
         var rowImages = [
                 'img/water-block.png',   // Top row is water
-                'img/grass-block.png',   // Row 1 of 2 of grass
-                'img/stone-block.png',   // Row 1 of 3 of stone
-                'img/stone-block.png',   // Row 2 of 3 of stone
-                'img/stone-block.png',   // Row 3 of 3 of stone
-                'img/stone-block.png',   // Row 3 of 3 of stone
-                'img/grass-block.png'    // Row 2 of 2 of grass
+                'img/grass-block.png',   // Row grass
+                'img/stone-block.png',   // Row stone
+                'img/stone-block.png',   // Row stone
+                'img/stone-block.png',   // Row stone
+                'img/stone-block.png',   // Row stone
+                'img/grass-block.png'    // Row grass
             ],
             numRows = 7,
             numCols = 7,
@@ -178,9 +178,9 @@ var Engine = (function(global) {
          */
         function collision(a, b) {
             return a.x < b.x + b.width &&
-            a.x + a.width > b.x &&
-            a.y < b.y + b.height &&
-            a.y + a.height > b.y;
+                    a.x + a.width > b.x &&
+                    a.y < b.y + b.height &&
+                    a.y + a.height > b.y;
         }
 
         /* Check enemy collisions.
@@ -200,8 +200,14 @@ var Engine = (function(global) {
                  * If the player has no more lives remaining, call the
                  * reset() function.
                  */
-                return player.lives > 1 ? player.updateLives('remove', 1) : reset();
-
+                 if (player.lives > 1) {
+                     return player.updateLives('remove', 1)
+                 } else {
+                     $('.game-over').show();
+                     gameOver.play();
+                     gameMusic.fade(1.0, 0.3, 1000);
+                     return reset();
+                 }
             }
         });
 

@@ -5,41 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frogger - Arcade Game</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/Resources.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/howler.min.js"></script>
-    <script src="js/app.js"></script>
-    <script>
-        var gameMusic = new Howl({
-            src: ['sounds/game-music.mp3'],
-            loop: true
-        });
 
-        var gameOver = new Howl({
-            src: ['sounds/gong.mp3']
-        });
-
-        var levelUp = new Howl({
-            src: ['sounds/points.mp3']
-        });
-
-        var gemCollect = new Howl({
-            src: ['sounds/gem.mp3']
-        });
-
-        var playerHit = new Howl({
-            src: ['sounds/punch.mp3']
-        });
-
-        var gameSelect = new Howl({
-            src: ['sounds/blop.mp3']
-        });
-    </script>
 </head>
 <body>
 
     <header>
-        <img class="img-responsive" src="img/logo.png" alt="frogger logo image">
+        <a id="back-button">back</a>
+        <img class="frogger-logo" src="img/frogger-logo.png" alt="frogger logo image">
         <a id="header-music" class="toggle-music off">Music Off</a>
     </header>
 
@@ -48,7 +20,7 @@
         <div class="grass-top"></div>
         <div class="content">
             <a id="start-screen-music" class=" toggle-music off">Music Off</a>
-            <img class="img-responsive" src="img/logo.png" alt="frogger logo image">
+            <img class="frogger-logo" src="img/frogger-logo.png" alt="frogger logo image">
             <div class="start-screen-options">
                 <a class="play-game button">Click to Play!</a>
                     <a id="how-to-play" class="button">How to Play</a>
@@ -86,6 +58,17 @@
         </div>
     </div>
 
+    <script src="js/helper.js"></script>
+    <script src="js/resources.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/howler.min.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/gem.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/level.js"></script>
+    <script src="js/stat.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/sound.js"></script>
     <script src="js/engine.js"></script>
 
 </body>
